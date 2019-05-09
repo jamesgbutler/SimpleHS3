@@ -1,9 +1,12 @@
 import os
 import boto3
 from botocore.client import Config
+
+#requests is only used to supress the ssl warning for lack of suitable certificates.
 import requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+
 
 tenantURL = 'https://david.hcp-demo.hcpdemo.com'
 bucket = 'tardis' #HCP namespace is equivalent to s3 bucket
